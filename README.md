@@ -101,6 +101,8 @@ Mengelola semua operasi yang berkaitan dengan pesanan.
 - Spring Boot
 - Spring Data JPA
 - H2 Database (atau database lain sesuai konfigurasi)
+- Lombok
+- Spring boot Web
 - Maven
 
 ## Cara Menjalankan Proyek
