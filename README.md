@@ -2,7 +2,7 @@
 
 ## Deskripsi
 
-Proyek ini adalah sebuah API backend untuk aplikasi e-commerce yang dibangun menggunakan Java dan Spring Boot. API ini menyediakan endpoint untuk mengelola berbagai entitas seperti produk, pengguna, pesanan, ulasan, pengiriman, dan toko. 
+Proyek ini adalah sebuah API backend untuk aplikasi e-commerce yang dibangun menggunakan Java dan Spring Boot. API ini menyediakan endpoint untuk mengelola berbagai entitas seperti produk, pengguna, pesanan, ulasan, pengiriman, dan toko. Ini dibuat sebagai bahan pembelajaraan saya.
 
 ## Fitur
 
