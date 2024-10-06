@@ -39,6 +39,16 @@ public class CategoryController {
         }
     }
 
+    @GetMapping("/product/{productId}")
+    public ResponseEntity<List<Category>> findCategoryByProductId(@PathVariable("id") Long productId) {
+        try {
+            List<Category> category = categoryService.findCategoryByProductId(productId);
+            return new ResponseEntity<>(category, HttpStatus.OK);
+        }  catch (NotFoundException e){
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
     // Membuat kategori baru
     @PostMapping
     public ResponseEntity<Category> createCategory(@RequestBody Category category) {

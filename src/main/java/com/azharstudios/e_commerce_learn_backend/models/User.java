@@ -15,7 +15,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_id;
+    private Long userId; // Gunakan camelCase untuk konsistensi
 
     @Column(nullable = false)
     private String name;
@@ -28,8 +28,8 @@ public class User {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(nullable = false)
-    private LocalDate date_of_birth;
+    @Column(name = "date_of_birth", nullable = false)
+    private LocalDate dateOfBirth; // Gunakan camelCase
 
     // Hash Password before storing to DB
     public void setPassword(String password) {

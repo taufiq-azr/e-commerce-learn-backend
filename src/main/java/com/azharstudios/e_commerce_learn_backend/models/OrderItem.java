@@ -15,14 +15,14 @@ public class OrderItem {
     private Long orderItemId;
 
     @ManyToOne
-    @JoinColumn(name = "order_id", nullable = false)
+    @JoinColumn(name = "orderId", nullable = false)
     private Order order;
 
     @ManyToOne
-    @JoinColumn(name = "product_id", nullable = false)
+    @JoinColumn(name = "productId", nullable = false)
     private Product product;
 
     private Integer quantity;  // Jumlah produk yang dipesan
 
-    private Double price;  // Harga produk saat dipesan
+    private Double price;   // Harga produk saat dipesan
 }

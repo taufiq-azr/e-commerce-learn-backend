@@ -15,7 +15,8 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long orderId;  // Ubah nama field sesuai konvensi
+    @Column(name = "orderId")
+    private Long orderId;  // Gunakan camelCase untuk konsistensi
 
     private Double totalPrice;
 

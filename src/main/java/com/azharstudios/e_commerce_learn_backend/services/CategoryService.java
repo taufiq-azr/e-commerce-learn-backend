@@ -26,8 +26,8 @@ public class CategoryService {
     }
 
 
-    public List<Category> findCategoryByProduct(Product product){
-        return categoryRepository.findCategoryByProduct(product);
+    public List<Category> findCategoryByProductId(Long productId){
+        return categoryRepository.findCategoryByProductId(productId);
     }
 
     public Category createCategory(Category category){

@@ -36,19 +36,19 @@ public class ProductService {
     }
 
     public List<Product> findAllProductByCategoryId(Long categoryId) {
-        return productRepository.findAllProductByCategoryId(categoryId);
+        return productRepository.findByCategory_CategoryId(categoryId);
     }
 
     public List<Product> findAllProductByReviewId(Long reviewId) {
-        return productRepository.findAllProductByReviewId(reviewId);
+        return productRepository.findByReviews_ReviewId(reviewId);
     }
 
     public List<Product> findAllProductByOrderId(Long orderId) {
-        return productRepository.findAllProductByOrderId(orderId);
+        return productRepository.findByOrderItems_Order_orderId(orderId);
     }
 
     public List<Product> findAllProductByShopId(Long shopId) {
-        return productRepository.findAllProductByShopId(shopId);
+        return productRepository.findByShop_ShopId(shopId);
     }
 
     public Product createProduct(Product product) {

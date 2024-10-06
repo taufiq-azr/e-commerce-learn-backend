@@ -10,11 +10,11 @@ import java.util.Optional;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-    List<Product> findAllProductByCategoryId(Long categoryId);
+    List<Product> findByCategory_CategoryId(Long categoryId); // Ubah ke findByCategoryId
 
-    List<Product> findAllProductByReviewId(Long reviewId);
+    List<Product> findByReviews_ReviewId(Long reviewId); // Ubah ke findByReviewId
 
-    List<Product> findAllProductByOrderId(Long orderId);
+    List<Product> findByOrderItems_Order_orderId(Long orderId); // Ubah ke findByOrderId
 
-    List<Product> findAllProductByShopId(Long shopId);
+    List<Product> findByShop_ShopId(Long shopId);
 }

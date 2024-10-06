@@ -16,31 +16,32 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long product_id;
+    @Column(name = "productId") // Perbaiki nama kolom sesuai konvensi
+    private Long productId;
 
-    @Column(name = "product_name")
+    @Column(name = "product_name", nullable = false)
     private String productName;
 
     @Column(name = "product_description")
     private String description;
 
-    @Column(name = "product_price")
+    @Column(name = "product_price", nullable = false)
     private Double price;
 
     private Integer unit;
 
-    @OneToOne
-    @JoinColumn(name = "product_category_id", nullable = false)
-    private Category category;
+    @ManyToOne
+    @JoinColumn(name = "categoryId", nullable = false)
+    private Category category; // Pastikan ini sesuai
 
-    @OneToMany(mappedBy = "product")
-    private List<Order> orders;
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private List<OrderItem> orderItems; // Memperbaiki relasi dengan OrderItem
 
     @ManyToOne
-    @JoinColumn(name = "shop_id", nullable = false)
+    @JoinColumn(name = "shopId", nullable = false)
     private Shop shop;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
     private List<Review> reviews;
 
 }

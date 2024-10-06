@@ -29,11 +29,11 @@ public class ReviewService {
     }
 
     public List<Review> findReviewByProductId(Long productId) {
-        return reviewRepository.findReviewByProductId(productId);
+        return reviewRepository.findByProduct_ProductId(productId);
     }
 
     public List<Review> findReviewByOrderId(Long orderId) {
-        return reviewRepository.findReviewByOrderId(orderId);
+        return reviewRepository.findByOrder_OrderId(orderId);
     }
 
     public Review createReview(Long orderId, Review review) {

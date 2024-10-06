@@ -4,9 +4,11 @@ import com.azharstudios.e_commerce_learn_backend.exception.NotFoundException;
 import com.azharstudios.e_commerce_learn_backend.models.OrderItem;
 import com.azharstudios.e_commerce_learn_backend.repository.OrderItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class OrderItemService {
 
     @Autowired

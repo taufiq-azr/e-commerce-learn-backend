@@ -14,11 +14,12 @@ public class Shop {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "shop_id")
+    @Column(name = "shopId")
     private Long shopId;
 
+    @Column(nullable = false)
     private String shopName;
 
-    @OneToMany(mappedBy = "shop")
+    @OneToMany(mappedBy = "shop", cascade = CascadeType.ALL)
     private List<Product> products;
 }
